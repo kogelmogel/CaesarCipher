@@ -1,7 +1,7 @@
 public class CaesarCipher {
-    public String encrypt(String input, int key){
+    public static String encrypt(String input, int key){
         //Make a StringBuilder with message (encrypted)
-        StringBuilder encrypted = new StringBuilder(input);
+        StringBuilder encrypted = new StringBuilder(input.toUpperCase());
         //Write down the alphabet
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         //Compute the shifted alphabet
@@ -23,4 +23,11 @@ public class CaesarCipher {
         }
         return encrypted.toString();
     }
+
+    public static void main(String args[]){
+        String message= "Hello you";
+        int key=17;
+        System.out.println(encrypt(message,key));
+    }
+
 }
